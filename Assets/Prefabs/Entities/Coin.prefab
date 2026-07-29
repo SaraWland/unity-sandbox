@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 57107477652598137}
   - component: {fileID: 5981369995529130372}
   - component: {fileID: -7413932117003604348}
+  - component: {fileID: 644089366479853218}
+  - component: {fileID: 6256431607679462726}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -143,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coin
   coinSound: {fileID: 8300000, guid: f925385a5e995ca48b8b49adb8e4e0be, type: 3}
+  coinBurstPrefab: {fileID: 1047109881663014317, guid: adf7d47636f51a24cb61180557c19b45, type: 3}
 --- !u!82 &-7413932117003604348
 AudioSource:
   m_ObjectHideFlags: 0
@@ -240,3 +243,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &644089366479853218
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296014835366966389}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: afe8a2ba434b2d648be04f9b99d293d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6256431607679462726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296014835366966389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2197875587b15be47bf8ed73d8125a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinAnimationOffset

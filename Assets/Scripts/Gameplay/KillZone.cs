@@ -11,6 +11,7 @@ public class KillZone : MonoBehaviour
         {
             Debug.Log("Player entered kill zone. Reloading scene...");
             AudioSource.PlayClipAtPoint(playerDamageSound, transform.position);
+            FindAnyObjectByType<ScreenShake>().Shake(0.15f, 0.1f);
             EndScreenManager.Instance.ShowEndScreen(false);
         }
     }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
@@ -24,5 +25,11 @@ public class PauseManager : MonoBehaviour
         PauseMenuUI.SetActive(isPaused);
         Time.timeScale = isPaused ? 0f : 1f;
         playerMovement.ToggleControls(!isPaused);
+    }
+
+    public void OnMainMenuButtonClicked()
+    {
+        Time.timeScale = 1f; // Resume the game
+        SceneManager.LoadScene("TitleScreen");
     }
 }

@@ -430,6 +430,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1472e2a16f089344da15e817510c1c19, type: 3}
+--- !u!114 &491970196 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -958276208875689914, guid: 35f0bdbb9c7c3d14ab0b380970f0a902, type: 3}
+  m_PrefabInstance: {fileID: 2011738558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca121d417d4dc5246ae1a31a2e4c2f5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScreenShake
 --- !u!114 &561905323 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 890071355681406278, guid: 3b3420bfecabd1b4fb7eb8d3a2b3208c, type: 3}
@@ -1080,9 +1091,25 @@ PrefabInstance:
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -2138967343066394360, guid: 35f0bdbb9c7c3d14ab0b380970f0a902, type: 3}
+      propertyPath: maxX
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: -2138967343066394360, guid: 35f0bdbb9c7c3d14ab0b380970f0a902, type: 3}
+      propertyPath: minX
+      value: -18
+      objectReference: {fileID: 0}
+    - target: {fileID: -2138967343066394360, guid: 35f0bdbb9c7c3d14ab0b380970f0a902, type: 3}
+      propertyPath: minY
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2138967343066394360, guid: 35f0bdbb9c7c3d14ab0b380970f0a902, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 772567452}
+    - target: {fileID: -2138967343066394360, guid: 35f0bdbb9c7c3d14ab0b380970f0a902, type: 3}
+      propertyPath: screenShake
+      value: 
+      objectReference: {fileID: 491970196}
     - target: {fileID: 2917308552446971298, guid: 35f0bdbb9c7c3d14ab0b380970f0a902, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -29179,6 +29206,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1512340394}
+    - target: {fileID: 5387773495266271300, guid: 3b3420bfecabd1b4fb7eb8d3a2b3208c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 362810114}
+    - target: {fileID: 5387773495266271300, guid: 3b3420bfecabd1b4fb7eb8d3a2b3208c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMainMenuButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387773495266271300, guid: 3b3420bfecabd1b4fb7eb8d3a2b3208c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387773495266271300, guid: 3b3420bfecabd1b4fb7eb8d3a2b3208c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5886882977982099760, guid: 3b3420bfecabd1b4fb7eb8d3a2b3208c, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -5,6 +5,7 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private Transform target;
     [SerializeField] private float smoothTime = 0.2f;
     [SerializeField] private Vector3 offset = new Vector3(0, 0, -10f);
+    [SerializeField] private ScreenShake screenShake;
 
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
@@ -36,12 +37,12 @@ public class CameraFollow : MonoBehaviour
         if (target != null)
         {
             Vector3 desiredPosition = target.position + offset;
-            transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, smoothTime);
-            transform.position = new Vector3(
-                Mathf.Clamp(transform.position.x, CorrectedMinX, CorrectedMaxX),
-                Mathf.Clamp(transform.position.y, CorrectedMinY, CorrectedMaxY),
-                transform.position.z
-            );
+            Vector3 smoothed = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, smoothTime);
+    
+            smoothed.x = Mathf.Clamp(smoothed.x, CorrectedMinX, CorrectedMaxX);
+            smoothed.y = Mathf.Clamp(smoothed.y, CorrectedMinY, CorrectedMaxY);
+    
+            transform.position = smoothed + (screenShake != null ? screenShake.CurrentOffset : Vector3.zero);
         }
     }
 }

@@ -27,6 +27,8 @@ public class EnemyContact : MonoBehaviour
         {
             // Player is not above the enemy, reload the scene
             Debug.Log("Player killed by enemy contact");
+            collision.gameObject.GetComponent<HitFlash>().Flash();
+            FindAnyObjectByType<ScreenShake>().Shake(0.15f, 0.1f);
             AudioSource.PlayClipAtPoint(playerDamageSound, transform.position);
             EndScreenManager.Instance.ShowEndScreen(false);
         }
