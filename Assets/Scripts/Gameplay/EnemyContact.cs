@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 public class EnemyContact : MonoBehaviour
 {
     [SerializeField] private float stompDetectionThreshold = -0.5f;
+    [SerializeField] private AudioClip stompSound;
+    [SerializeField] private AudioClip playerDamageSound;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -18,13 +20,15 @@ public class EnemyContact : MonoBehaviour
             Destroy(gameObject);
             Rigidbody2D playerRb = collision.rigidbody;
             playerRb.linearVelocity = new Vector2(playerRb.linearVelocity.x, 3f); // Bounce the player up
+            AudioSource.PlayClipAtPoint(stompSound, transform.position);
             Debug.Log("Enemy destroyed by player stomp");
         }
         else
         {
             // Player is not above the enemy, reload the scene
             Debug.Log("Player killed by enemy contact");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            AudioSource.PlayClipAtPoint(playerDamageSound, transform.position);
+            EndScreenManager.Instance.ShowEndScreen(false);
         }
     }
 }
